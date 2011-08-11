@@ -1,0 +1,12 @@
+diff -up hal-0.5.11rc2/hald/haldaemon.in.foo hal-0.5.11rc2/hald/haldaemon.in
+--- hal-0.5.11rc2/hald/haldaemon.in.foo	2008-04-17 14:47:24.000000000 -0400
++++ hal-0.5.11rc2/hald/haldaemon.in	2008-04-17 14:47:36.000000000 -0400
+@@ -2,7 +2,7 @@
+ #
+ # haldaemon:   HAL daemon
+ #
+-# chkconfig: 345 98 02
++# chkconfig: 345 26 74
+ # description:  This is a daemon for collecting and maintaing information \
+ #               about hardware from several sources. \
+ #               See http://www.freedesktop.org/Software/hal

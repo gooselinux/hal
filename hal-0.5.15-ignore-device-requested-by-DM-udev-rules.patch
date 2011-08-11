@@ -1,0 +1,14 @@
+--- hal-0.5.14.old/hald/linux/osspec.c	2009-08-24 14:42:30.000000000 +0200
++++ hal-0.5.14.old/hald/linux/osspec.c	2010-07-13 12:42:21.000000000 +0200
+@@ -215,6 +215,11 @@ hald_udev_data (GIOChannel *source, GIOC
+ 				g_free (str);
+ 			}
+ 			g_free (dstr);
++		} else if (strncmp(key, "DM_UDEV_DISABLE_OTHER_RULES_FLAG=", 33) == 0) {
++			if (strtoul(&key[33], NULL, 10) == 1) {
++				HAL_INFO (("ignoring device requested by DM udev rules"));
++				goto invalid;
++			}
+ 		}
+ 	}
+ 
